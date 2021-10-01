@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+    <title>Class 6</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
+    <style>
+        .head {
+            display: flex;
+            text-align: left;
+            width: 100%;
+            background-color: rgb(35, 38, 82);
+            border-radius: 8px;
+        }
+
+        .head div {
+            width: 100%;
+        }
+
+        .head div h1 {
+            text-align: center;
+        }
+
+        .head div h3,
+        h4 {
+            margin: 2px 5px;
+        }
+
+        img {
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        li {}
+    </style>
+</header>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Section</th>
+                <th>Section Code</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range $e := .NameList}}
+            <tr>
+                <td>{{$e.Name}}</td>
+                <td>{{$e.Department.Name}}</td>
+                <td>{{$e.Department.Section}}</td>
+                <td>{{$e.Department.Section_code}}</td>
+                <td>{{$e.Grade}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+    <a class="button is-primary" href="/new">Add Employee</a>
+</body>
+
+</html>

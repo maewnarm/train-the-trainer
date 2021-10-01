@@ -17,6 +17,12 @@ func main() {
 		switch app {
 		case "class3":
 			classroom.Mainclass(3)
+		case "class4":
+			classroom.Mainclass(4)
+		case "class5":
+			classroom.Mainclass(5)
+		case "class6":
+			classroom.Mainclass(6)
 		case "hw2":
 			hw.Mainhw2()
 		case "hw3":

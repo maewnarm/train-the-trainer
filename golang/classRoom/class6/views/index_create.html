@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+    <title>Create</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
+    <style>
+        .head {
+            display: flex;
+            text-align: left;
+            width: 100%;
+            background-color: rgb(35, 38, 82);
+            border-radius: 8px;
+        }
+
+        .head div {
+            width: 100%;
+        }
+
+        .head div h1 {
+            text-align: center;
+        }
+
+        .head div h3,
+        h4 {
+            margin: 2px 5px;
+        }
+
+        img {
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        label {
+            display: inline-block;
+            min-width: 200px;
+        }
+    </style>
+</header>
+
+<body>
+    <form method="POST" action="/">
+        <Label>Name</Label>
+        <input name="Name" type="text" />
+        </br>
+        <Label>Department name</Label>
+        <input name="Dept_name" type="text" />
+        </br>
+        <Label>Section name</Label>
+        <input name="Section" type="text" />
+        </br>
+        <Label>Section code</Label>
+        <input name="Section_code" type="text" />
+        </br>
+        <Label>Grade</Label>
+        <input name="Grade" type="text" />
+        </br>
+        <a class="button is-warning" href="/">Back</a>
+        <button type="submit" class="button is-success">Add</button>
+    </form>
+</body>
+
+</html>

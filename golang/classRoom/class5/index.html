@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+    <title>My Resume</title>
+    <style>
+        .head {
+            display: flex;
+            text-align: left;
+            width: 100%;
+            background-color: rgb(35, 38, 82);
+            border-radius: 8px;
+        }
+
+        .head div {
+            width: 100%;
+        }
+
+        .head div h1 {
+            text-align: center;
+        }
+
+        .head div h3,
+        h4 {
+            margin: 2px 5px;
+        }
+
+        img {
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        li {}
+    </style>
+</header>
+
+<body>
+    <table border=1>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Section</th>
+                <th>Section Code</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range $e := .Lists}}
+            <tr>
+                <td>{{$e.Name}}</td>
+                {{range $d := $e.Department}}
+                <td>{{$d.Name}}</td>
+                <td>{{$d.Section}}</td>
+                <td>{{$d.Section_code}}</td>
+                {{end}}
+                <td>{{$e.Grade}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</body>
+
+</html>
